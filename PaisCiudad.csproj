@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{50F1E093-82AD-416A-9DB9-FEE84E358459}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PaisCiudad</RootNamespace>
+    <AssemblyName>PaisCiudad</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\ConexionBDD.cs" />
+    <Compile Include="Config\ControlErrores.cs" />
+    <Compile Include="Controller\CiudadesController.cs" />
+    <Compile Include="Controller\PaisesController.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CiudadesModel.cs" />
+    <Compile Include="Model\PaisesModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pubsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pubsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ciudades\frm_Ciudades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Ciudades\frm_Ciudades.Designer.cs">
+      <DependentUpon>frm_Ciudades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ciudades\frm_ListaCiudades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Ciudades\frm_ListaCiudades.Designer.cs">
+      <DependentUpon>frm_ListaCiudades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ciudades\frm_NuevaCiudad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Ciudades\frm_NuevaCiudad.Designer.cs">
+      <DependentUpon>frm_NuevaCiudad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Paises\frm_ListaPaises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paises\frm_ListaPaises.Designer.cs">
+      <DependentUpon>frm_ListaPaises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Paises\frm_NuevoPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paises\frm_NuevoPais.Designer.cs">
+      <DependentUpon>frm_NuevoPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Paises\frm_Paises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paises\frm_Paises.Designer.cs">
+      <DependentUpon>frm_Paises.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\Ciudades\frm_Ciudades.resx">
+      <DependentUpon>frm_Ciudades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Ciudades\frm_ListaCiudades.resx">
+      <DependentUpon>frm_ListaCiudades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Ciudades\frm_NuevaCiudad.resx">
+      <DependentUpon>frm_NuevaCiudad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paises\frm_ListaPaises.resx">
+      <DependentUpon>frm_ListaPaises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paises\frm_NuevoPais.resx">
+      <DependentUpon>frm_NuevoPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paises\frm_Paises.resx">
+      <DependentUpon>frm_Paises.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="pubsDataSet.xsc">
+      <DependentUpon>pubsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pubsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pubsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pubsDataSet.xss">
+      <DependentUpon>pubsDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
