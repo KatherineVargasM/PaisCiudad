@@ -30,7 +30,7 @@ namespace PaisCiudad.Views.Paises
 
                 if (string.IsNullOrEmpty(detalle))
                 {
-                    MessageBox.Show("Por favor, ingrese un detalle para el país.");
+                    MessageBox.Show("Por favor ingrese un país.");
                     return;
                 }
 
@@ -56,6 +56,11 @@ namespace PaisCiudad.Views.Paises
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frm_NuevoPais_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

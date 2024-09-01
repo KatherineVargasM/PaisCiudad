@@ -33,13 +33,13 @@ namespace PaisCiudad.Views.Ciudades
             {
                 if (cmb_Pais.SelectedValue == null)
                 {
-                    MessageBox.Show("Por favor, seleccione un país.");
+                    MessageBox.Show("Por favor selecciona un Pais.");
                     return;
                 }
 
                 if (string.IsNullOrWhiteSpace(txt_Detalle.Text))
                 {
-                    MessageBox.Show("El detalle no puede estar vacío.");
+                    MessageBox.Show("Este campo no puede estar vacio.");
                     return;
                 }
 

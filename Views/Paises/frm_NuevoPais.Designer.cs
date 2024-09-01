@@ -100,6 +100,7 @@
             this.MinimizeBox = false;
             this.Name = "frm_NuevoPais";
             this.Text = "Nuevo Pais";
+            this.Load += new System.EventHandler(this.frm_NuevoPais_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
