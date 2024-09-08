@@ -7,7 +7,7 @@ using PaisCiudad.Views.Ciudades;
 
 namespace PaisCiudad
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
@@ -19,5 +19,14 @@ namespace PaisCiudad
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Ingreso());
         }
+    }
+
+    public static class ConfiguracionProyecto
+    {
+        public static string usuario { get; set; }
+        public static string rol { get; set; }
+        public static int IDusuario { get; set; }
+
+
     }
 }

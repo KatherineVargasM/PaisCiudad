@@ -122,6 +122,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Ciudades";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Ciudades";
             this.Load += new System.EventHandler(this.frm_Ciudades_Load);
             this.ResumeLayout(false);

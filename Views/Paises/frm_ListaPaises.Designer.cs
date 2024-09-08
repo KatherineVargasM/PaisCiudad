@@ -32,13 +32,13 @@
             this.btn_EliminarPais = new System.Windows.Forms.Button();
             this.btn_NuevoPais = new System.Windows.Forms.Button();
             this.dgv_Paises = new System.Windows.Forms.DataGridView();
+            this.IdPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.paisesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pubsDataSet = new PaisCiudad.pubsDataSet();
             this.lbl_Lista = new System.Windows.Forms.Label();
             this.paisesTableAdapter = new PaisCiudad.pubsDataSetTableAdapters.PaisesTableAdapter();
-            this.IdPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Paises)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paisesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pubsDataSet)).BeginInit();
@@ -84,31 +84,6 @@
             this.dgv_Paises.TabIndex = 7;
             this.dgv_Paises.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Paises_CellContentClick);
             // 
-            // paisesBindingSource
-            // 
-            this.paisesBindingSource.DataMember = "Paises";
-            this.paisesBindingSource.DataSource = this.pubsDataSet;
-            // 
-            // pubsDataSet
-            // 
-            this.pubsDataSet.DataSetName = "pubsDataSet";
-            this.pubsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lbl_Lista
-            // 
-            this.lbl_Lista.AutoSize = true;
-            this.lbl_Lista.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Lista.Location = new System.Drawing.Point(164, 33);
-            this.lbl_Lista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_Lista.Name = "lbl_Lista";
-            this.lbl_Lista.Size = new System.Drawing.Size(159, 20);
-            this.lbl_Lista.TabIndex = 8;
-            this.lbl_Lista.Text = "LISTA DE PAISES";
-            // 
-            // paisesTableAdapter
-            // 
-            this.paisesTableAdapter.ClearBeforeFill = true;
-            // 
             // IdPais
             // 
             this.IdPais.DataPropertyName = "IdPais";
@@ -134,6 +109,31 @@
             this.Editar.Text = "Editar";
             this.Editar.UseColumnTextForButtonValue = true;
             // 
+            // paisesBindingSource
+            // 
+            this.paisesBindingSource.DataMember = "Paises";
+            this.paisesBindingSource.DataSource = this.pubsDataSet;
+            // 
+            // pubsDataSet
+            // 
+            this.pubsDataSet.DataSetName = "pubsDataSet";
+            this.pubsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lbl_Lista
+            // 
+            this.lbl_Lista.AutoSize = true;
+            this.lbl_Lista.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Lista.Location = new System.Drawing.Point(164, 33);
+            this.lbl_Lista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Lista.Name = "lbl_Lista";
+            this.lbl_Lista.Size = new System.Drawing.Size(159, 20);
+            this.lbl_Lista.TabIndex = 8;
+            this.lbl_Lista.Text = "LISTA DE PAISES";
+            // 
+            // paisesTableAdapter
+            // 
+            this.paisesTableAdapter.ClearBeforeFill = true;
+            // 
             // frm_ListaPaises
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -149,6 +149,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_ListaPaises";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Paises";
             this.Load += new System.EventHandler(this.frm_ListaPaises_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Paises)).EndInit();

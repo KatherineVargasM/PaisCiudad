@@ -1,5 +1,6 @@
 ﻿using PaisCiudad.Views.Ciudades;
 using PaisCiudad.Views.Paises;
+using PaisCiudad.Views.Usuarios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +30,12 @@ namespace PaisCiudad.Views
         {
             frm_ListaPaises listaPaises = new frm_ListaPaises();
             listaPaises.Show();
+        }
+
+        private void uSUARIOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Usuarios usuariosf= new frm_Usuarios();
+            usuariosf.Show();
         }
     }
 }

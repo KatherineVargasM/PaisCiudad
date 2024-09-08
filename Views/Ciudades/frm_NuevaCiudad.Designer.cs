@@ -124,6 +124,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_NuevaCiudad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva Ciudad";
             this.Load += new System.EventHandler(this.frm_NuevaCiudad_Load);
             this.ResumeLayout(false);

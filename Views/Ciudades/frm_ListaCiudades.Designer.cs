@@ -121,6 +121,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_ListaCiudades";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Ciudades";
             this.Load += new System.EventHandler(this.frm_ListaCiudades_Load);
             ((System.ComponentModel.ISupportInitialize)(this.paisesBindingSource)).EndInit();

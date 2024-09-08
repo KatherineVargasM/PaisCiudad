@@ -99,6 +99,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_NuevoPais";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Pais";
             this.Load += new System.EventHandler(this.frm_NuevoPais_Load);
             this.ResumeLayout(false);
