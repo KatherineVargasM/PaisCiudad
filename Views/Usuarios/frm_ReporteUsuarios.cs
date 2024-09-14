@@ -7,33 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
+using PaisCiudad.Config;
 
 namespace PaisCiudad.Views.Usuarios
 {
-    public partial class frm_ListaUsuarios : Form
+    public partial class frm_ReporteUsuarios : Form
     {
-        public frm_ListaUsuarios()
+        public frm_ReporteUsuarios()
         {
             InitializeComponent();
         }
 
-        private void btn_Usuarios_Click(object sender, EventArgs e)
-        {
-            frm_Usuarios usuarios = new frm_Usuarios();
-            usuarios.Show();
-        }
-
-        private void frm_ListaUsuarios_Load(object sender, EventArgs e)
+        private void frm_ReporteUsuarios_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'pubsDataSet.usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.pubsDataSet.usuario);
 
+            this.reportViewer1.RefreshReport();
+            
         }
-
-        private void btn_Reportes_Click(object sender, EventArgs e)
+        private void reportViewer1_Load(object sender, EventArgs e)
         {
-            frm_ReporteUsuarios reporteusuarios = new frm_ReporteUsuarios();
-            reporteusuarios.Show();
+
         }
     }
 }

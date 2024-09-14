@@ -30,23 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgv_Usuarios = new System.Windows.Forms.DataGridView();
-            this.lbl_titulo = new System.Windows.Forms.Label();
-            this.btn_Usuarios = new System.Windows.Forms.Button();
-            this.btn_Reportes = new System.Windows.Forms.Button();
-            this.pubsDataSet = new PaisCiudad.pubsDataSet();
-            this.pubsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pubsDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuarioTableAdapter = new PaisCiudad.pubsDataSetTableAdapters.usuarioTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreusuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rolesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pubsDataSet = new PaisCiudad.pubsDataSet();
+            this.lbl_titulo = new System.Windows.Forms.Label();
+            this.btn_Usuarios = new System.Windows.Forms.Button();
+            this.btn_Reportes = new System.Windows.Forms.Button();
+            this.pubsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pubsDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioTableAdapter = new PaisCiudad.pubsDataSetTableAdapters.usuarioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pubsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pubsDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pubsDataSetBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_Usuarios
@@ -63,6 +63,45 @@
             this.dgv_Usuarios.Name = "dgv_Usuarios";
             this.dgv_Usuarios.Size = new System.Drawing.Size(300, 152);
             this.dgv_Usuarios.TabIndex = 0;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // nombreusuarioDataGridViewTextBoxColumn
+            // 
+            this.nombreusuarioDataGridViewTextBoxColumn.DataPropertyName = "nombre_usuario";
+            this.nombreusuarioDataGridViewTextBoxColumn.HeaderText = "Nombre de Usuario";
+            this.nombreusuarioDataGridViewTextBoxColumn.Name = "nombreusuarioDataGridViewTextBoxColumn";
+            this.nombreusuarioDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // rolesDataGridViewTextBoxColumn
+            // 
+            this.rolesDataGridViewTextBoxColumn.DataPropertyName = "roles";
+            this.rolesDataGridViewTextBoxColumn.HeaderText = "Rol";
+            this.rolesDataGridViewTextBoxColumn.Name = "rolesDataGridViewTextBoxColumn";
+            this.rolesDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "usuario";
+            this.usuarioBindingSource.DataSource = this.pubsDataSet;
+            // 
+            // pubsDataSet
+            // 
+            this.pubsDataSet.DataSetName = "pubsDataSet";
+            this.pubsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lbl_titulo
             // 
@@ -94,11 +133,7 @@
             this.btn_Reportes.TabIndex = 41;
             this.btn_Reportes.Text = "Reportes";
             this.btn_Reportes.UseVisualStyleBackColor = true;
-            // 
-            // pubsDataSet
-            // 
-            this.pubsDataSet.DataSetName = "pubsDataSet";
-            this.pubsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btn_Reportes.Click += new System.EventHandler(this.btn_Reportes_Click);
             // 
             // pubsDataSetBindingSource
             // 
@@ -110,43 +145,9 @@
             this.pubsDataSetBindingSource1.DataSource = this.pubsDataSet;
             this.pubsDataSetBindingSource1.Position = 0;
             // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "usuario";
-            this.usuarioBindingSource.DataSource = this.pubsDataSet;
-            // 
             // usuarioTableAdapter
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // nombreusuarioDataGridViewTextBoxColumn
-            // 
-            this.nombreusuarioDataGridViewTextBoxColumn.DataPropertyName = "nombre_usuario";
-            this.nombreusuarioDataGridViewTextBoxColumn.HeaderText = "Nombre de Usuario";
-            this.nombreusuarioDataGridViewTextBoxColumn.Name = "nombreusuarioDataGridViewTextBoxColumn";
-            this.nombreusuarioDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // rolesDataGridViewTextBoxColumn
-            // 
-            this.rolesDataGridViewTextBoxColumn.DataPropertyName = "roles";
-            this.rolesDataGridViewTextBoxColumn.HeaderText = "Rol";
-            this.rolesDataGridViewTextBoxColumn.Name = "rolesDataGridViewTextBoxColumn";
-            this.rolesDataGridViewTextBoxColumn.Width = 75;
             // 
             // frm_ListaUsuarios
             // 
@@ -165,10 +166,10 @@
             this.Text = "Lista Usuarios";
             this.Load += new System.EventHandler(this.frm_ListaUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pubsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pubsDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pubsDataSetBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
