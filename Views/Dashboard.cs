@@ -34,8 +34,8 @@ namespace PaisCiudad.Views
 
         private void uSUARIOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_Usuarios usuariosf= new frm_Usuarios();
-            usuariosf.Show();
+            frm_ListaUsuarios listausuarios= new frm_ListaUsuarios();
+            listausuarios.Show();
         }
     }
 }

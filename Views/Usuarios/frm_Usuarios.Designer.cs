@@ -30,8 +30,6 @@
         {
             this.btn_Eliminar = new System.Windows.Forms.Button();
             this.btn_Modificar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lst_usuarios = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +41,8 @@
             this.txt_repita = new System.Windows.Forms.TextBox();
             this.txt_contrasenia = new System.Windows.Forms.TextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.lst_usuarios = new System.Windows.Forms.ListBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Eliminar
@@ -66,25 +66,6 @@
             this.btn_Modificar.Text = "Modificar";
             this.btn_Modificar.UseVisualStyleBackColor = true;
             this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(344, 72);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 20);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "Lista de Usuarios:";
-            // 
-            // lst_usuarios
-            // 
-            this.lst_usuarios.FormattingEnabled = true;
-            this.lst_usuarios.ItemHeight = 20;
-            this.lst_usuarios.Location = new System.Drawing.Point(348, 97);
-            this.lst_usuarios.Name = "lst_usuarios";
-            this.lst_usuarios.Size = new System.Drawing.Size(284, 204);
-            this.lst_usuarios.TabIndex = 43;
-            this.lst_usuarios.DoubleClick += new System.EventHandler(this.lst_usuarios_DoubleClick);
             // 
             // label4
             // 
@@ -192,11 +173,30 @@
             this.txt_nombre.Size = new System.Drawing.Size(284, 26);
             this.txt_nombre.TabIndex = 32;
             // 
+            // lst_usuarios
+            // 
+            this.lst_usuarios.FormattingEnabled = true;
+            this.lst_usuarios.ItemHeight = 20;
+            this.lst_usuarios.Location = new System.Drawing.Point(348, 97);
+            this.lst_usuarios.Name = "lst_usuarios";
+            this.lst_usuarios.Size = new System.Drawing.Size(191, 204);
+            this.lst_usuarios.TabIndex = 43;
+            this.lst_usuarios.DoubleClick += new System.EventHandler(this.lst_usuarios_DoubleClick);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(344, 72);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(136, 20);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Lista de Usuarios:";
+            // 
             // frm_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 431);
+            this.ClientSize = new System.Drawing.Size(575, 431);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.btn_Modificar);
             this.Controls.Add(this.label5);
@@ -230,8 +230,6 @@
 
         private System.Windows.Forms.Button btn_Eliminar;
         private System.Windows.Forms.Button btn_Modificar;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListBox lst_usuarios;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -243,5 +241,7 @@
         private System.Windows.Forms.TextBox txt_repita;
         private System.Windows.Forms.TextBox txt_contrasenia;
         private System.Windows.Forms.TextBox txt_nombre;
+        private System.Windows.Forms.ListBox lst_usuarios;
+        private System.Windows.Forms.Label label5;
     }
 }

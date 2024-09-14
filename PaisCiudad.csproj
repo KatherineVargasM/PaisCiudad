@@ -111,6 +111,12 @@
     <Compile Include="Views\Paises\frm_Paises.Designer.cs">
       <DependentUpon>frm_Paises.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Usuarios\frm_ListaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Usuarios\frm_ListaUsuarios.Designer.cs">
+      <DependentUpon>frm_ListaUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Usuarios\frm_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Paises\frm_Paises.resx">
       <DependentUpon>frm_Paises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Usuarios\frm_ListaUsuarios.resx">
+      <DependentUpon>frm_ListaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Usuarios\frm_Usuarios.resx">
       <DependentUpon>frm_Usuarios.cs</DependentUpon>
